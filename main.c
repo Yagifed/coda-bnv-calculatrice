@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include "operations.h"
 
 int main()
 {
@@ -18,32 +19,32 @@ int main()
 	if (symbol == '+')
 	{
 		printf("addition\n");
-        result = nb1 + nb2;
+        result = add(nb1, nb2);
 	}
 	else if (symbol == '-')
 	{
 		printf("soustraction\n");
-        result = nb1 - nb2;
+        result = sub(nb1, nb2);
 	}
 	else if (symbol == '*')
 	{
 		printf("multiplication\n");
-        result = nb1 * nb2;
+        result = mul(nb1, nb2);
 	}
 	else if (symbol == '%')
 	{
 		printf("modulo\n");
-        result = fmod(nb1, nb2);
+        result = mod(nb1, nb2);
 	}
 	else if (symbol == '/')
     {
         printf("division\n");
-        result = nb1 / nb2;
+        result = divi(nb1, nb2);
     }
     else
     {
         printf("operation non reconnue\n");
     }
-    printf("%.0f %c %.0f = %.2f", nb1, symbol, nb2, result);
+    printf("%.0f %c %.0f = %.2f\n", nb1, symbol, nb2, result);
 	exit(0);
 }
